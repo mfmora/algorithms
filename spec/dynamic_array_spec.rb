@@ -1,4 +1,5 @@
 require "dynamic_array"
+require "byebug"
 
 describe DynamicArray do
   it "starts out empty" do
@@ -12,8 +13,8 @@ describe DynamicArray do
   it "pushes/pops items" do
     arr = DynamicArray.new
     5.times { |i| arr.push(i) }
-
     expect(arr.length).to eq(5)
+
     5.times { |i| expect(arr[i]) == i }
 
     4.downto(0) do |i|
